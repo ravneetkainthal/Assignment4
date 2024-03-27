@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        /*css*/
+        header{
+            text-align: center;
+        }
+        footer{
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-color: lavender;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:lightcyan;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+  
+    <form action="/insertProduct" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="imgUrl">Image URL:</label>
+        <input type="text" id="imgUrl" name="imgUrl"><br>
+
+        <label for="stars">Stars:</label>
+        <input type="number" id="stars" name="stars" step="0.1" min="0" max="5" required><br>
+
+        <label for="reviews">Reviews:</label>
+        <input type="number" id="reviews" name="reviews" min="0" required><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" min="0" step="0.01" required><br>
+
+        <label for="listPrice">List Price:</label>
+        <input type="number" id="listPrice" name="listPrice" min="0" step="0.01"><br>
+
+        <label for="categoryName">Category Name:</label>
+        <input type="text" id="categoryName" name="categoryName" required><br>
+
+        <label for="boughtInLastMonth">Bought In Last Month:</label>
+        <input type="number" id="boughtInLastMonth" name="boughtInLastMonth" min="0" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{{!-- <h1>{{ title }}</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Stars</th>
+            <th>Reviews</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <td>{{ title }}</td>
+            <td>{{ price }}</td>
+            <td>{{ categoryName }}</td>
+            <td>{{ stars }}</td>
+            <td>{{ reviews }}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table> --}}
+{{#each product}}
+  <h1>Product Details:</h1>
+  <p><strong>Title:</strong> {{ this.title }}</p>
+  <p><strong>Category Name:</strong> {{ this.categoryName }}</p>
+  <p><strong>List Price:</strong> ${{ this.listPrice }}</p>
+  <p><strong>Price:</strong> ${{ this.price }}</p>
+  <p><strong>Is Best Seller:</strong> {{ this.isBestSeller }}</p>
+  <p><strong>Last Month Purchase Details:</strong> {{ this.boughtInLastMonth }}</p>
+  <p><strong>Stars:</strong> {{ this.stars }}</p>
+  <p><strong>Reviews:</strong> {{ this.reviews }}</p>
+  <img src="{{ this.imgUrl }}" alt="{{ this.title }}" style="max-width: 320px;">
+{{/each}}
